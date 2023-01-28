@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/countries/static/css/main.92350d34.css",
+    "main.js": "/countries/static/js/main.9efed6ed.js",
+    "static/media/Gordita-Medium.otf": "/countries/static/media/Gordita-Medium.57ad2e0b7fce1864eef9.otf",
+    "static/media/Gordita-Bold.otf": "/countries/static/media/Gordita-Bold.933dc82c419ccef42c6f.otf",
+    "static/media/Gordita-Light.otf": "/countries/static/media/Gordita-Light.dd77b5c856048c4a0679.otf",
+    "static/media/Gordita-Regular.otf": "/countries/static/media/Gordita-Regular.9a1fe35dd5c9e2a6ef9a.otf",
+    "index.html": "/countries/index.html",
+    "main.92350d34.css.map": "/countries/static/css/main.92350d34.css.map",
+    "main.9efed6ed.js.map": "/countries/static/js/main.9efed6ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92350d34.css",
+    "static/js/main.9efed6ed.js"
+  ]
+}
