@@ -1,0 +1,62 @@
+button {
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    transition: $transition-all;
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+    user-select: none;
+    transition: $transition-all;
+
+    &--primary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $accent;
+        border-radius: $theme-radius;
+        color: $white;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem 0.7rem 1.5rem;
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        border: 2px solid $accent;
+
+        &:hover {
+            background-color: transparent;
+            color: $accent;
+        }
+
+        @include tablet-lg {
+            font-size: 0.5rem;
+            padding: 0.65rem 1rem 0.55rem 1.3rem;
+            margin: 0.2rem;
+
+        }
+
+        @include mobile {
+            font-size: 0.5rem;
+
+        }
+    }
+
+    &--md {
+        font-size: 0.5rem;
+        padding: 0.575rem 1.25rem 0.5rem 1.25rem;
+
+    }
+
+    &--sm {
+        font-size: 0.75rem;
+        padding: 0.1rem 1rem 0 1rem;
+        height: 2rem;
+
+        @include mobile {
+            font-size: 0.5rem;
+            margin: 0.2rem;
+        }
+    }
+}

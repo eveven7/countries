@@ -1,0 +1,54 @@
+.Pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  size: 50%;
+
+  button {
+    margin-right: 0.2rem;
+    margin-left: 0.3rem;
+  }
+
+  .PaginationDots {
+    border: none;
+    background-color: $white;
+    width: 2rem;
+  }
+
+  .Next {
+    background: $white;
+    border: 1px solid $black;
+    padding: 10px;
+    width: 45px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $black;
+
+  }
+
+  .PaginationDots {
+    border: none;
+    background-color: $white;
+    width: 45px;
+  }
+
+  @include mobile {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+  }
+
+  @include tablet {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+  }
+
+  @include tablet-lg {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

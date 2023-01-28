@@ -1,0 +1,46 @@
+* {
+    font-family: 'Gordita';
+    color: $text-primary;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+
+h2 {
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1.25em;
+    color: #B9BABD;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    align-items: center;
+    @include desktop {
+        font-size: 0.75rem;
+        width: 80%;
+    }
+    @include tablet {
+        font-size: 0.75rem;
+        width: 80%;
+    }
+    @include mobile {
+        font-size: 0.75rem;
+        width: 80%;
+    }
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.5em;
+}
