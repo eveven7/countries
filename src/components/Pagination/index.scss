@@ -1,14 +1,26 @@
+
 .Pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  size: 50%;
+ 
 
   button {
     margin-right: 0.2rem;
     margin-left: 0.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
   }
+
+  button.Active {
+    border: 2px solid $accent;
+    background: $white;
+    pointer-events: none;
+  }
+  
+ 
 
   .PaginationDots {
     border: none;
@@ -16,6 +28,8 @@
     width: 2rem;
   }
 
+
+  
   .Next {
     background: $white;
     border: 1px solid $black;

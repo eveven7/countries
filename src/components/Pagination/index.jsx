@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ListCard from '../ListCard';
 import { usePagination, DOTS } from '../usePagination';
 
-const Pagination = ({data, itemsPerPage, totalCount}) => {
+const Pagination = ({ data, itemsPerPage, totalCount }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const siblingCount = 1;
   const totalPageCount = Math.ceil(totalCount / itemsPerPage);
-  const [paginationRange ]= usePagination({
+  const [paginationRange] = usePagination({
     currentPage,
     totalPageCount,
     siblingCount,
@@ -15,7 +15,7 @@ const Pagination = ({data, itemsPerPage, totalCount}) => {
   });
 
 
-  const PaginationButton = ({className, text, onClick}) => {
+  const PaginationButton = ({ className, text, onClick }) => {
     return (
       <button
         onClick={onClick}
@@ -25,16 +25,20 @@ const Pagination = ({data, itemsPerPage, totalCount}) => {
       </button>
     );
   };
-  
-  
-  PaginationButton.defaultProps ={
-    onClick: ()=>{}
+
+
+  PaginationButton.defaultProps = {
+    onClick: () => { }
   };
   PaginationButton.propTypes = {
     className: PropTypes.string.isRequired,
-    text: PropTypes.oneOfType([ PropTypes.string,PropTypes.number,]).isRequired,
+    text: PropTypes.oneOfType([PropTypes.string, PropTypes.number,]).isRequired,
     onClick: PropTypes.func
   };
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [totalCount]);
+
   useEffect(() => {
     setCurrentPage(1);
   }, [totalCount]);
@@ -54,7 +58,7 @@ const Pagination = ({data, itemsPerPage, totalCount}) => {
     const endIndex = startIndex + itemsPerPage;
     return data.slice(startIndex, endIndex);
   };
- 
+
   return (
     <div>
       <div className="Container">
@@ -62,11 +66,11 @@ const Pagination = ({data, itemsPerPage, totalCount}) => {
           <ListCard key={itemData.name} data={itemData} />
         ))}
       </div>
-     
+
       <div className="Pagination">
         <PaginationButton
           onClick={onPreviousPage}
-          className="Next"
+          className={`$"button button--primary button--sm" ${currentPage === 1 ? "Disabled": ''}`}
           text='&#x3c;'
         />
         {paginationRange().map((pageNumber, index) => (
@@ -79,17 +83,14 @@ const Pagination = ({data, itemsPerPage, totalCount}) => {
             :
             <PaginationButton
               key={index}
-              className="button button--primary button--sm"
-
               onClick={changePage}
-              text ={pageNumber}
+              className={`$"button button--primary button--sm" ${currentPage === pageNumber && "Active"}`}
+              text={pageNumber}
             />
         ))}
         <PaginationButton
           onClick={onNextPage}
-          className="Next"
-          
-
+          className={`$"button button--primary button--sm" ${currentPage === totalPageCount ? "Disabled" : ''}`}
           text=' &#x3e;'
         />
       </div>
@@ -100,7 +101,7 @@ const Pagination = ({data, itemsPerPage, totalCount}) => {
 export default Pagination;
 Pagination.defaultProps = {
 };
-Pagination.propTypes= {
+Pagination.propTypes = {
   data: PropTypes.array.isRequired,
   itemsPerPage: PropTypes.number.isRequired,
   totalCount: PropTypes.number.isRequired
