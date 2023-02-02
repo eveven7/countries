@@ -12,9 +12,9 @@ Requirements:
 -  Implement a filter(s) that filters countries:
 - That are smaller than Lithuania by area.
 - That are in “Oceania” region.
--Pagination
--Handled error and loading states
--SASS styling
+- Pagination
+- Handled error and loading states
+- SASS styling
 
 
 Here’s a wireframe as an example for your UI choices:
